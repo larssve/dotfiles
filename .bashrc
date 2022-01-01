@@ -17,7 +17,7 @@ export PATH
 
 # set prompt
 source /usr/share/git-core/contrib/completion/git-prompt.sh
-export PS1="\u \w \$(__git_ps1 '(%s) ') |> "
+export PS1="\u \w \$(__git_ps1 '(%s) ')"
 
 # Change theme
 set_kitty_theme () {
@@ -31,9 +31,14 @@ set_monitors () {
 # User specific aliases and functions
 alias la="ls -la --color=auto"
 alias ll="ls -l --color=auto"
-alias vim="nvim"
 alias ..="cd .."
 alias light-theme="set_kitty_theme AtomOneLight"
 alias dark-theme="set_kitty_theme Atom"
 
-alias code="flatpak run com.vscodium.codium"
+#alias code="flatpak run com.vscodium.codium"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GPG_TTY=$(tty)
