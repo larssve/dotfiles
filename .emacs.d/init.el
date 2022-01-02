@@ -15,10 +15,11 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(blink-cursor-mode 0)
 
 ;; buffer spacing
-(setq line-spacing 0.1) 
-(setq header-line-format " ")
+;(setq line-spacing 0.1) 
+;(setq header-line-format " ")
 
 ;; add melpa
 (require 'package)
@@ -28,7 +29,8 @@
 ;(package-refresh-contents) 
 
 ;; add and install packages
-(defvar my-packages '(evil
+(defvar my-packages '(color-theme-sanityinc-tomorrow
+		      evil
 		      evil-escape
 		      magit
 		      org-bullets
@@ -55,7 +57,6 @@
 
 (require 'evil-escape)
 (setq-default evil-escape-key-sequence "jk")
-(setq-default evil-escape-lighter "jk ") ;; this is bugged in the package for some reason
 (evil-escape-mode)
 
 ;;; org mode
@@ -73,3 +74,11 @@
       org-fontify-whole-heading-line t
       org-fontify-done-headline t
       org-fontify-quote-and-verse-blocks t)
+
+;; fonts
+(set-face-attribute 'default nil :font "Cascadia Code" :height 120)
+
+;; theme
+(require 'color-theme-sanityinc-tomorrow)
+(load-theme 'sanityinc-tomorrow-day)
+
