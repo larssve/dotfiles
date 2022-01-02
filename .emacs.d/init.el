@@ -3,6 +3,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" default))
  '(package-selected-packages '(org-bullets magit vertico evil-escape evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -66,7 +68,7 @@
 
 (setq org-startup-indented t
       org-bullets-bullet-list '(" ") ;; no bullets, needs org-bullets package
-      org-ellipsis "  " ;; folding symbol
+      org-ellipsis " ..." ;; folding symbol
       org-pretty-entities t
       org-hide-emphasis-markers t
       ;; show actually italicized text instead of /italicized text/
@@ -81,4 +83,3 @@
 ;; theme
 (require 'color-theme-sanityinc-tomorrow)
 (load-theme 'sanityinc-tomorrow-day)
-
