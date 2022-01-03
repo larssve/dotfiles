@@ -18,6 +18,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode 0)
+(setq-default mode-line-format nil)
 
 ;; buffer spacing
 ;(setq line-spacing 0.1) 
@@ -32,10 +33,14 @@
 
 ;; add and install packages
 (defvar my-packages '(color-theme-sanityinc-tomorrow
+		      clojure-mode
+		      inf-clojure
+		      geiser-chicken
 		      evil
 		      evil-escape
 		      magit
 		      org-bullets
+		      paredit
 		      undo-tree
 		      vertico))
 
@@ -83,3 +88,4 @@
 ;; theme
 (require 'color-theme-sanityinc-tomorrow)
 (load-theme 'sanityinc-tomorrow-day)
+
