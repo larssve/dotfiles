@@ -25,8 +25,10 @@ set_kitty_theme () {
 }
 
 set_monitors () {
-  xrandr --output DP-2 --primary --right-of DP-4 --output DP-4 --auto
+  xrandr --output DP-2 --left-of DP-4 --output DP-4 --primary
 }
+
+set_monitors
 
 # User specific aliases and functions
 alias la="ls -la --color=auto"
@@ -42,3 +44,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export GPG_TTY=$(tty)
+. "$HOME/.cargo/env"
