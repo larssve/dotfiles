@@ -24,18 +24,10 @@ set_kitty_theme () {
   ln -s -f "$HOME/.config/kitty/kitty-themes/$1.conf" "$HOME/.config/kitty/theme.conf"
 }
 
-set_monitors () {
-  xrandr --output DP-2 --left-of DP-4 --output DP-4 --primary
-}
-
-set_monitors
-
 # User specific aliases and functions
 alias la="ls -la --color=auto"
 alias ll="ls -l --color=auto"
 alias ..="cd .."
-alias light-theme="set_kitty_theme AtomOneLight"
-alias dark-theme="set_kitty_theme Atom"
 
 #alias code="flatpak run com.vscodium.codium"
 
