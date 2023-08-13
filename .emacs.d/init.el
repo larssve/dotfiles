@@ -5,7 +5,7 @@
 (blink-cursor-mode 0)
 (setq visible-bell 1)
 ;(setq-default mode-line-format nil)
-(setq-default display-line-numbers 'relative)
+(setq-default display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 (setq-default tab-width 2)
 (setq inhibit-startup-screen t)
