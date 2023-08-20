@@ -3,12 +3,21 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 (blink-cursor-mode 0)
-(setq visible-bell 1)
 ;(setq-default mode-line-format nil)
 (setq-default display-line-numbers-type 'relative)
 (global-display-line-numbers-mode)
 (setq-default tab-width 2)
 (setq inhibit-startup-screen t)
+
+
+;;(setq visible-bell 1)
+(setq ring-bell-function
+      (lambda ()
+        (let ((orig-fg (face-foreground 'mode-line)))
+          (set-face-foreground 'mode-line "#F2804F")
+          (run-with-idle-timer 0.1 nil
+                               (lambda (fg) (set-face-foreground 'mode-line fg))
+                               orig-fg))))
 
 ;; buffer spacing
 ;(setq line-spacing 0.1) 
