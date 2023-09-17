@@ -27,3 +27,6 @@ alias vim="nvim"
 
 export GPG_TTY=$(tty)
 . "$HOME/.cargo/env"
+
+cat ~/.cache/wal/sequences
+source ~/.cache/wal/colors-tty.sh
