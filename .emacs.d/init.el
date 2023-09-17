@@ -100,14 +100,15 @@
 (global-set-key (kbd "C-c n i") 'org-roam-node-insert)
 
 (require 'rustic)
+(setq rustic-analyzer-command '("~/.cargo/bin/rust-analyzer"))
+(setq rustic-cargo-bin "~/.cargo/bin/cargo")
+(add-hook 'eglot--managed-mode-hook (lambda () (flymake-mode -1)))
 (setq rustic-lsp-client 'eglot
       ;rustic-format-on-save 'true
       ;eglot-send-changes-idle-time (* 60 60)
       )
+															 
 (add-hook 'rust-mode-hook #'tree-sitter-hl-mode)
-
-(require 'elm-mode)
-(setq elm-mode-hook '(elm-indent-simple-mode))
 
 (defun add-eval-last-sexp (eval-f)
 	(lambda ()
@@ -153,3 +154,16 @@
 ;; (load-theme 'doom-one t)
 (load-theme 'doom-tomorrow-day t)			 	
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+	 '("680f62b751481cc5b5b44aeab824e5683cf13792c006aeba1c25ce2d89826426" default)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

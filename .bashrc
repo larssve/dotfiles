@@ -19,21 +19,11 @@ export PATH
 source /usr/share/git-core/contrib/completion/git-prompt.sh
 export PS1="\u \w \$(__git_ps1 '(%s) ')"
 
-# Change theme
-set_kitty_theme () {
-  ln -s -f "$HOME/.config/kitty/kitty-themes/$1.conf" "$HOME/.config/kitty/theme.conf"
-}
-
 # User specific aliases and functions
 alias la="ls -la --color=auto"
 alias ll="ls -l --color=auto"
 alias ..="cd .."
-
-#alias code="flatpak run com.vscodium.codium"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias vim="nvim"
 
 export GPG_TTY=$(tty)
 . "$HOME/.cargo/env"
